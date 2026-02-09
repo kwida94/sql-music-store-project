@@ -98,13 +98,13 @@ ORDER BY LastPurchaseDate;
 
 Here are a few things I noticed while exploring the data:
 
-Some countries contribute much more to total revenue than others.
+1. Some countries contribute much more to total revenue than others.
 
-A small number of genres and artists make up a large share of total sales.
+2. A small number of genres and artists make up a large share of total sales.
 
-Revenue changes month to month, and using a running total helped show overall growth.
+3. Revenue changes month to month, and using a running total helped show overall growth.
 
-There are customers who haven’t made a purchase in a long time, which could be a sign of churn in a real business.
+4. There are customers who haven’t made a purchase in a long time, which could be a sign of churn in a real business.
 
 ## What I Learned
 
