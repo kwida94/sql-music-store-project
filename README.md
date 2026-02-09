@@ -17,7 +17,7 @@ DB Browser for SQLite
 Git & GitHub
 
 ## Project Folder Layout
-
+```text
 SQL_Music_Store_Project/
 │
 ├── data/
@@ -27,6 +27,7 @@ SQL_Music_Store_Project/
 │   └── 03_advanced.sql
 │
 └── README.md
+```
 
 ## What Each File Does
 
@@ -60,12 +61,13 @@ These helped me practice joins, grouping, and aggregate functions in a real-worl
 ## Example Queries
 
 ### Total Revenue
-
+```sql
 SELECT SUM(total) AS total_sales
 FROM invoices;
+```
 
 ### Revenue by Genre
-
+```sql
 SELECT
     g.Name AS Genre,
     SUM(ii.UnitPrice * ii.Quantity) AS Revenue
@@ -74,9 +76,10 @@ JOIN tracks t ON ii.TrackId = t.TrackId
 JOIN genres g ON t.GenreId = g.GenreId
 GROUP BY g.Name
 ORDER BY Revenue DESC;
+```
 
 ### Customers Who Haven't Purchased Recently
-
+```sql
 SELECT
     c.CustomerId,
     c.FirstName,
@@ -89,6 +92,7 @@ JOIN (
     GROUP BY CustomerId
 ) t ON c.CustomerId = t.CustomerId
 ORDER BY LastPurchaseDate;
+```
 
 ## Interesting Things I Found
 
